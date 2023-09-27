@@ -4,22 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#">The Gallery</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </nav>
-    <div><input type="text" placeholder="search images">
-    <button type="button" onclick=searchImage()>search</button></div></div>
+    <form>
+      <input type="text" placeholder="search images" />
+      <button type="submit">search</button>
+    </form>
     <div id="content"></div>
-    <div>
-      <div><h1>images container</h1></div>
+    <div class="grid-container">
+      <div id="pics"></div>
+    </div>
+    <div class="btn-container">
+      <button hidden disabled id="prev" type="button">prev</button>
+      <button hidden id="next" type="button">next</button>
     </div>
   </body>
   <script src="index.js"></script>
   <script src="search.js"></script>
-  
 </html>
