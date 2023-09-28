@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Gallery</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -16,22 +17,58 @@
           <li><a href="#">Home</a></li>
           <li><a href="#gallery">Gallery</a></li>
         </ul>
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
       </div>
     </nav>
-    <form>
+    <form class="search">
       <input type="text" placeholder="search images" />
-      <button type="submit">search</button>
+      <button class="search-btn" type="submit">search</button>
     </form>
     <div id="content"></div>
     <div class="grid-container">
       <div id="pics"></div>
     </div>
     <div class="btn-container">
-      <button hidden disabled id="prev" type="button">prev</button>
-      <button hidden id="next" type="button">next</button>
+      <button disabled id="prev" type="button">prev</button>
+      <button id="next" type="button">next</button>
+    </div>
+    <div id="image-modal" class="modal">
+      <div class="modal-content">
+        <h3>Details</h3>
+        <span class="close" id="image-modal-close">&times;</span>
+        <!-- <img id="image-modal-image" src="" alt="Image" /> -->
+        <span class="image-modal-info"
+          ><p>tags:</p>
+          <p id="image-modal-tags"></p>
+        </span>
+        <span class="image-modal-info"
+          ><p>type:</p>
+          <p id="image-modal-type"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>height(px):</p>
+          <p id="image-modal-height"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>wiidth(px):</p>
+          <p id="image-modal-width"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>views:</p>
+          <p id="image-modal-views"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>downloads</p>
+          <p id="image-modal-downloads"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>likes:</p>
+          <p id="image-modal-likes"></p
+        ></span>
+        <span class="image-modal-info"
+          ><p>comments:</p>
+          <p id="image-modal-comments"></p>
+        </span>
+      </div>
     </div>
   </body>
   <script src="index.js"></script>
