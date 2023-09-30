@@ -55,8 +55,20 @@ input::placeholder {
 
 .img-container {
   padding: 10px;
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+  box-shadow: 0px 0px 34px 6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 34px 6px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 34px 6px rgba(0, 0, 0, 1);
 }
 
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 .pic {
   max-width: 100%;
   height: auto;
@@ -64,6 +76,21 @@ input::placeholder {
 .pic:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+.additional-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-container:hover .additional-info {
+  opacity: 1;
+  cursor: pointer;
 }
 
 #prev,
@@ -143,13 +170,38 @@ input::placeholder {
   font-weight: bold;
 }
 
-.menu-toggle {
-  display: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
+#tags {
+  margin: 10px;
+  white-space: nowrap;
+  max-width: fit-content;
+  overflow-x: auto;
+  border: none;
 }
 
+.tags-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: antiquewhite;
+  color: rgb(243, 186, 111);
+  border: 2px solid antiquewhite;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: cursive;
+}
+
+.tags-btn:hover {
+  background-color: #9e6e26;
+  color: #fff;
+}
+.tags-btn-active {
+  background-color: #9e6e26;
+  color: #fff;
+}
 /* Media query for responsive design */
 @media screen and (max-width: 768px) {
   .nav-links.show {
