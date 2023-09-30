@@ -9,6 +9,8 @@ let CATEGORY = "";
 
 const favoriteState = [];
 
+const favoriteIds = sessionStorage.setItem("likes", favoriteState);
+
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
 const pictures = document.getElementById("pics");
